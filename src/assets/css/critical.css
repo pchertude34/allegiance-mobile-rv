@@ -96,7 +96,7 @@
     margin: 0;
     color: #fff;
     padding: 0 1.5rem;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -149,7 +149,7 @@
     width: 4.25rem;
     height: 4.25rem;
     margin: 0 0 1.5rem 0;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;

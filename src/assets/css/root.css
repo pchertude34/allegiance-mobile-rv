@@ -5,9 +5,9 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #ffba19;
+    --primary: #003e82;
     --primaryLight: #ffd675;
-    --secondary: #001f3f;
+    --secondary: #a0241a;
     --secondaryLight: #001f3f;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
@@ -1118,7 +1118,7 @@ html {
     /* prevents padding from adding to the width */
     box-sizing: border-box;
     padding: 0 2rem;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color: #fff;
     display: inline-block;
     position: relative;
