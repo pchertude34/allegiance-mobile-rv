@@ -195,21 +195,17 @@ eleventyNavigation:
         <!--Mobile Image-->
         <source
           media="(max-width: 600px)"
-          srcset="
-            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic25.jpg
-          "
+          srcset="/assets/images/rv-repair-2.webp"
         />
         <!--Tablet and above Image-->
         <source
           media="(min-width: 601px)"
-          srcset="
-            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic25.jpg
-          "
+          srcset="/assets/images/rv-repair-2.webp"
         />
         <img
           loading="lazy"
           decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic25.jpg"
+          src="/assets/images/rv-repair-2.webp"
           alt="appliance"
           width="630"
           height="390"
@@ -220,55 +216,30 @@ eleventyNavigation:
         <!--Mobile Image-->
         <source
           media="(max-width: 600px)"
-          srcset="
-            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic26.jpg
-          "
+          srcset="/assets/images/rv-repair-3.webp"
         />
         <!--Tablet and above Image-->
         <source
           media="(min-width: 601px)"
-          srcset="
-            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic26.jpg
-          "
+          srcset="/assets/images/rv-repair-3.webp"
         />
         <img
           loading="lazy"
           decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic26.jpg"
+          src="/assets/images/rv-repair-3.webp"
           alt="appliance"
           width="461"
           height="300"
         />
       </picture>
-      <!--Splash Graphic-->
-      <img
-        class="cs-graphic cs-graphic1"
-        loading="lazy"
-        decoding="async"
-        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/splash-4.svg"
-        alt="splash"
-        width="1154"
-        height="505"
-        aria-hidden="true"
-      />
-      <!--Tire Mark-->
-      <img
-        class="cs-graphic cs-graphic2"
-        loading="lazy"
-        decoding="async"
-        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-mark.svg"
-        alt="tire mark"
-        width="1085"
-        height="322"
-        aria-hidden="true"
-      />
+
       <div class="cs-box">
         <span class="cs-number">100+</span>
         <span class="cs-desc">RVs repaired this year</span>
       </div>
     </div>
     <div class="cs-content">
-      <span class="cs-topper">About Us</span>
+      <span class="cs-topper-secondary">About Us</span>
       <h2 class="cs-title">Quality With The Best Standards</h2>
       <p class="cs-text">
         Allegiance Mobile RV Services, LLC is a veteran-owned company based in
@@ -303,42 +274,14 @@ eleventyNavigation:
 </section>
 
 <!-- ============================================ -->
-<!--                   Logos                      -->
-<!-- ============================================ -->
-
-<section id="logos-572">
-  <div class="cs-container">
-    <!--Ideally you want to use svg's for the file path image, which is why these aren't wrapped in picture elements for different screen sizes-->
-    <img
-      class="cs-logo"
-      src="/assets/images/rvtaa_logo.webp"
-      alt="logo"
-      width="287"
-      height="65"
-      loading="lazy"
-      decoding="async"
-    />
-    <img
-      class="cs-logo"
-      src="/assets/images/nrvta_logo.webp"
-      alt="logo"
-      width="229"
-      height="55"
-      loading="lazy"
-      decoding="async"
-    />
-  </div>
-</section>
-
-<!-- ============================================ -->
 <!--                  Reviews                     -->
 <!-- ============================================ -->
 
 <section id="reviews-1832">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">Testimonials</span>
-      <h2 class="cs-title">Our Members Testimonials</h2>
+      <span class="cs-topper">Reviews</span>
+      <h2 class="cs-title">Our Customer's Testimonials</h2>
     </div>
     <div class="cs-flex-group">
       <div class="cs-image-group">
@@ -410,7 +353,7 @@ eleventyNavigation:
           class="cs-quote"
           loading="lazy"
           decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-quote.svg"
+          src="/assets/icons/quote.svg"
           alt="quotes"
           width="97"
           height="80"
@@ -420,30 +363,34 @@ eleventyNavigation:
     </div>
   </div>
   <!--Texture Graphic-->
-  <picture class="cs-background">
-    <!--Mobile Image-->
-    <source
-      media="(max-width: 1023px)"
-      srcset="
-        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png
-      "
-    />
-    <!--Tablet and above Image-->
-    <source
-      media="(min-width: 1024px)"
-      srcset="
-        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png
-      "
-    />
+</section>
+
+<!-- ============================================ -->
+<!--                   Logos                      -->
+<!-- ============================================ -->
+
+<section id="logos-572">
+  <div class="cs-container">
+    <!--Ideally you want to use svg's for the file path image, which is why these aren't wrapped in picture elements for different screen sizes-->
     <img
+      class="cs-logo"
+      src="/assets/images/rvtaa_logo.webp"
+      alt="logo"
+      width="287"
+      height="65"
       loading="lazy"
       decoding="async"
-      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png"
-      alt="dotted texture"
-      width="1920"
-      height="600"
     />
-  </picture>
+    <img
+      class="cs-logo"
+      src="/assets/images/nrvta_logo.webp"
+      alt="logo"
+      width="229"
+      height="55"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
 </section>
 
 {% include 'components/contact.html' %} {% endblock %}

@@ -11,7 +11,7 @@
     --primary: #003e82;
     --primaryLight: #ffd675;
     --secondary: #a0241a;
-    --secondaryLight: #001f3f;
+    --secondaryLight: #ffcdc9;
     --tertiary: #f6ebe4;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
@@ -39,6 +39,18 @@
     line-height: 1.2em;
     font-weight: 700;
     color: var(--secondary);
+    text-align: inherit;
+  }
+
+  .cs-topper-secondary {
+    display: block;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    font-weight: 700;
+    color: var(--primary);
     text-align: inherit;
   }
 

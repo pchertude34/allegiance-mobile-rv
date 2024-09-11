@@ -66,7 +66,7 @@
         width: calc(8 / 16 * 1rem);
         height: calc(8 / 16 * 1rem);
         margin-top: calc(8 / 16 * 1rem);
-        background: var(--secondary);
+        background: var(--primary);
         display: block;
         /* prevents flexbox from squishing it */
         flex: none;
@@ -84,7 +84,7 @@
       color: #fff;
       min-width: calc(150 / 16 * 1rem);
       padding: 0 calc(24 / 16 * 1rem);
-      background-color: var(--secondary);
+      background-color: var(--primary);
       display: inline-block;
       position: relative;
       z-index: 1;
@@ -174,7 +174,7 @@
       padding: calc(8 / 16 * 1em);
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
-      background-color: var(--secondary);
+      background-color: var(--primary);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -238,8 +238,8 @@
 @media only screen and (min-width: 0rem) {
   #logos-572 {
     /* 60px - 130px */
-    padding: clamp(3.75rem, 8vw, 8.125rem) calc(16 / 16 * 1rem);
-    background-color: var(--grayLight);
+    padding: clamp(1.75rem, 8vw, 3.75rem) calc(16 / 16 * 1rem);
+    // background-color: var(--secondaryLight);
 
     .cs-container {
       width: 100%;
