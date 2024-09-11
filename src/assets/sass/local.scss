@@ -239,7 +239,7 @@
   #logos-572 {
     /* 60px - 130px */
     padding: clamp(3.75rem, 8vw, 8.125rem) calc(16 / 16 * 1rem);
-    // background-color: var(--gray);
+    background-color: var(--grayLight);
 
     .cs-container {
       width: 100%;
@@ -286,18 +286,213 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #reviews-306 {
-    background-color: #f7f7f7;
-    /* prevents overflow from overlapping quote icon */
+  #reviews-1832 {
+    padding: var(--sectionPadding);
     overflow: hidden;
     position: relative;
+    z-index: 1;
 
-    .cs-image {
+    &:before {
+      /* gradient that softens the transition from the pattern to the edge of the section */
+      content: "";
       width: 100%;
-      max-height: calc(450 / 16 * 1rem);
+      height: 20%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      opacity: 1;
+      position: absolute;
       display: block;
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      /* gradient that softens the transition from the pattern to the edge of the section */
+      content: "";
+      width: 100%;
+      height: 20%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      opacity: 1;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+    }
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: calc(550 / 16 * 1rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
       position: relative;
-      aspect-ratio: 360/380;
+      z-index: 1;
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+
+    .cs-title {
+      max-width: 26ch;
+      margin: 0;
+    }
+
+    .cs-flex-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: calc(48 / 16 * 1rem);
+    }
+
+    .cs-review-group {
+      text-align: center;
+      max-width: calc(860 / 16 * 1rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cs-stars {
+      width: calc(162 / 16 * 1rem);
+      height: auto;
+      margin: 0 0 calc(24 / 16 * 1rem);
+      display: block;
+    }
+
+    .cs-quote {
+      /* 244px - 340px */
+      width: clamp(15.25rem, 25vw, 21.25rem);
+      height: auto;
+      margin: 0 0 calc(24 / 16 * 1rem) 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+      transform: translateX(-50%);
+    }
+
+    .cs-review-text {
+      /* 25px - 39px */
+      font-size: clamp(1rem, 3vw, 1.5625rem);
+      line-height: 1.2em;
+      font-weight: bold;
+      text-align: inherit;
+      margin: 0 0 calc(40 / 16 * 1rem) 0;
+      color: var(--headerColor);
+    }
+
+    .cs-name {
+      font-size: calc(20 / 16 * 1rem);
+      line-height: 1.2em;
+      text-align: inherit;
+      font-weight: 700;
+      margin: 0 0 calc(4 / 16 * 1rem) 0;
+      color: var(--headerColor);
+      display: block;
+    }
+
+    .cs-job {
+      font-size: calc(16 / 16 * 1rem);
+      line-height: 1.2em;
+      text-align: inherit;
+      margin: 0;
+      color: var(--primary);
+      display: block;
+    }
+
+    .cs-image-group {
+      /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
+      font-size: min(3.7vw, 1rem);
+      /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+      width: calc(372 / 16 * 1em);
+      height: calc(352 / 16 * 1em);
+      /* make a white shadow to fade over the texture background behind it so it hides the fact its a mask on top of the image */
+      box-shadow: rgba(255, 255, 255, 1) 0px -45px 90px 4px;
+      position: relative;
+      z-index: -1;
+    }
+
+    .cs-picture {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        /* makes it act like a background image */
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .cs-mask {
+      width: 101%;
+      height: 101%;
+      object-fit: cover;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    .cs-dark {
+      display: none;
+    }
+
+    .cs-waves {
+      width: 55vw;
+      /* 400px - 566px */
+      max-width: clamp(25rem, 40vw, 35.375rem);
+      height: auto;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      /* 100px - 160px */
+      right: calc(clamp(6.25rem, 17vw, 10rem) * -1);
+      z-index: -1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .cs-background {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
 
       img {
         position: absolute;
@@ -305,116 +500,42 @@
         left: 0;
         height: 100%;
         width: 100%;
+        opacity: 0.12;
+        /* Makes img tag act as a background image */
         object-fit: cover;
       }
-    }
-
-    .cs-content {
-      max-width: calc(630 / 16 * 1rem);
-      padding: var(--sectionPadding);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .cs-review {
-      /* 25px - 39px */
-      font-size: clamp(1rem, 2.4vw, 1.2rem);
-      text-align: left;
-      margin: 0;
-      /* 28px - 40px */
-      margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
-      color: var(--bodyTextColor);
-    }
-
-    .cs-quote {
-      width: calc(40 / 16 * 1rem);
-      height: auto;
-      margin-bottom: calc(32 / 16 * 1rem);
-      display: block;
-    }
-
-    .cs-info {
-      display: flex;
-      justify-content: auto;
-      align-items: center;
-    }
-
-    .cs-flex {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-basis: content;
-    }
-
-    .cs-profile {
-      width: calc(50 / 16 * 1rem);
-      height: auto;
-      margin-right: calc(12 / 16 * 1rem);
-      border-radius: 50%;
-      display: block;
-    }
-
-    .cs-name {
-      /* 20px - 25px */
-      font-size: clamp(1.25rem, 2vw, 1.5625rem);
-      font-weight: 700;
-      line-height: 1.2em;
-      color: var(--headerColor);
-      display: block;
-      flex-basis: content;
-    }
-
-    .cs-job {
-      font-size: calc(16 / 16 * 1rem);
-      line-height: 1.5em;
-      font-weight: 400;
-      width: calc(200 / 16 * 1rem);
-      color: var(--bodyTextColor);
-      display: block;
-      flex-basis: content;
-    }
-
-    .cs-watermark {
-      /* 87px - 136px */
-      width: clamp(5.4375rem, 12.2vw, 8.5rem);
-      height: auto;
-      opacity: 0.09;
-      position: absolute;
-      bottom: 0;
-      right: calc(20 / 16 * 1rem);
     }
   }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-306 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
+  #reviews-1832 {
+    .cs-container {
+      max-width: calc(1280 / 16 * 1rem);
+    }
 
-    .cs-image {
-      width: 44%;
-      height: auto;
-      max-height: 100%;
-      /* prevent flexbox from squishing it */
+    .cs-flex-group {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .cs-image-group {
+      font-size: min(1.68vw, 1rem);
+      /* prevents flexbox from squishing it */
       flex: none;
-      aspect-ratio: initial;
     }
 
-    .cs-content {
-      /* 76px - 128px */
-      padding-left: clamp(4.75rem, 10vw, 8rem);
-      padding-right: calc(32 / 16 * 1rem);
+    .cs-review-group {
+      text-align: left;
+      width: 65vw;
+      align-items: flex-start;
     }
 
-    .cs-watermark {
-      /* 16px - 175px */
-      right: calc(clamp(1rem, 9.5vw, 10.9375rem) * -1);
+    .cs-quote {
+      left: auto;
+      right: 0;
+      transform: none;
     }
   }
 }

@@ -334,62 +334,116 @@ eleventyNavigation:
 <!--                  Reviews                     -->
 <!-- ============================================ -->
 
-<section id="reviews-306">
-  <picture class="cs-image">
-    <source
-      media="(max-width: 600px)"
-      srcset="/assets/images/review-splash.jpg"
-    />
-    <source
-      media="(min-width: 601px)"
-      srcset="/assets/images/review-splash.jpg"
-    />
-    <img
-      aria-hidden="true"
-      loading="lazy"
-      decoding="async"
-      src="/assets/images/review-splash.jpg"
-      alt="building"
-      width="842"
-      height="548"
-    />
-  </picture>
-  <div class="cs-content">
-    <img
-      class="cs-quote"
-      aria-hidden="true"
-      loading="lazy"
-      decoding="async"
-      src="/assets/icons/quotation-mark.svg"
-      alt="quote"
-      width="40"
-      height="33"
-    />
-    <p class="cs-review">
-      This RV service was recommend to us by Brinkley RV for warranty service.
-      The owner Pat, who had worked with Brinkley in the past, got us in under a
-      tight schedule. He inspected our 5th wheel and received the parts in time
-      to get us back on the road. We have worked with a lot of RV techs and
-      Allegieance is at the top of our recommendations.
-    </p>
-    <div class="cs-info">
-      <div class="cs-flex">
+<section id="reviews-1832">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Testimonials</span>
+      <h2 class="cs-title">Our Members Testimonials</h2>
+    </div>
+    <div class="cs-flex-group">
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/review-splash.jpg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/review-splash.jpg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/review-splash.jpg"
+            alt="person"
+            width="570"
+            height="680"
+          />
+        </picture>
+
+        <!--White SVG Mask. Download the image and change the fill color to match the color of the section background below it-->
+        <img
+          class="cs-mask cs-light"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-paint-stroke.svg"
+          alt="white splatter"
+          width="700"
+          height="666"
+        />
+        <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+        <img
+          class="cs-mask cs-dark"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-paint-stroke.svg"
+          alt="white splatter"
+          width="700"
+          height="666"
+        />
+      </div>
+      <div class="cs-review-group">
+        <!--Stars-->
+        <img
+          class="cs-stars"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+          alt="quotes"
+          width="97"
+          height="80"
+          aria-hidden="true"
+        />
+        <p class="cs-review-text">
+          This RV service was recommend to us by Brinkley RV for warranty
+          service. The owner Pat, who had worked with Brinkley in the past, got
+          us in under a tight schedule. He inspected our 5th wheel and received
+          the parts in time to get us back on the road. We have worked with a
+          lot of RV techs and Allegieance is at the top of our recommendations.
+        </p>
         <span class="cs-name">Mick</span>
         <span class="cs-job">Google Reviews</span>
+        <!--Quote-->
+        <img
+          class="cs-quote"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-quote.svg"
+          alt="quotes"
+          width="97"
+          height="80"
+          aria-hidden="true"
+        />
       </div>
     </div>
-    <!--Bottom watermark quote-->
+  </div>
+  <!--Texture Graphic-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 1023px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png
+      "
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 1024px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png
+      "
+    />
     <img
-      class="cs-watermark"
-      aria-hidden="true"
       loading="lazy"
       decoding="async"
-      src="/assets/icons/quotation-mark.svg"
-      alt="quote"
-      width="136"
-      height="120"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png"
+      alt="dotted texture"
+      width="1920"
+      height="600"
     />
-  </div>
+  </picture>
 </section>
 
 {% include 'components/contact.html' %} {% endblock %}
