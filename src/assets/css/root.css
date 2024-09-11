@@ -596,7 +596,7 @@
     width: 100%;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    padding: 1.25rem 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -604,7 +604,7 @@
   }
   #cs-navigation .cs-logo {
     width: auto;
-    height: 2.5rem;
+    height: 4rem;
     margin: 0 auto 0 0;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
@@ -1189,7 +1189,7 @@
     display: inline-block;
     margin: auto;
     margin-bottom: 1.875em;
-    height: 2em;
+    height: 16rem;
     width: auto;
     text-align: center;
   }
@@ -1327,7 +1327,7 @@
   }
   #footer .left-section .logo {
     margin-left: 0;
-    height: 2.5rem;
+    height: 16rem;
     text-align: left;
   }
   #footer .left-section p {
