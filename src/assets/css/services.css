@@ -120,7 +120,7 @@
   #content-page-1532 ol,
   #content-page-1532 ul {
     max-width: 39.375rem;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     padding: 0;
     /* clips the bullets to create the half circle */
     overflow: hidden;
@@ -178,26 +178,15 @@
     object-fit: cover;
     display: block;
   }
-  #content-page-1532 .cs-flower {
-    width: 9.5625em;
-    height: auto;
-    position: relative;
-    left: -2em;
-    top: -2.25em;
-    z-index: 10;
+  #content-page-1532 .cs-content-group {
+    display: none;
+    width: 100%;
   }
-  #content-page-1532 .cs-floater {
-    width: 44.375em;
-    height: auto;
-    position: absolute;
-    right: 9.375em;
-    top: 25em;
-    z-index: -1;
-    animation-name: floatAnimation2;
-    animation-duration: 14s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+  #content-page-1532 .cs-wrapper {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 }
 /* Tablet - 768px */
@@ -216,6 +205,12 @@
   #content-page-1532 .cs-image-group {
     font-size: min(1.3vw, 1em);
     display: block;
+  }
+  #content-page-1532 .cs-content-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
   }
 }
 /* Desktop - 1200px */

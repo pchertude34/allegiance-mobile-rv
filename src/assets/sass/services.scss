@@ -135,7 +135,7 @@
     ol,
     ul {
       max-width: calc(630 / 16 * 1rem);
-      margin: 0 0 calc(32 / 16 * 1rem) 0;
+      margin: 0 0 calc(16 / 16 * 1rem) 0;
       padding: 0;
       /* clips the bullets to create the half circle */
       overflow: hidden;
@@ -203,27 +203,16 @@
       }
     }
 
-    .cs-flower {
-      width: calc(153 / 16 * 1em);
-      height: auto;
-      position: relative;
-      left: calc(-32 / 16 * 1em);
-      top: calc(-36 / 16 * 1em);
-      z-index: 10;
+    .cs-content-group {
+      display: none;
+      width: 100%;
     }
 
-    .cs-floater {
-      width: calc(710 / 16 * 1em);
-      height: auto;
-      position: absolute;
-      right: calc(150 / 16 * 1em);
-      top: calc(400 / 16 * 1em);
-      z-index: -1;
-      animation-name: floatAnimation2;
-      animation-duration: 14s;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
-      animation-iteration-count: infinite;
+    .cs-wrapper {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
     }
   }
 }
@@ -247,6 +236,13 @@
     .cs-image-group {
       font-size: min(1.3vw, 1em);
       display: block;
+    }
+
+    .cs-content-group {
+      display: flex;
+      flex-direction: row;
+      gap: calc(16 / 16 * 1rem);
+      width: 100%;
     }
   }
 }
