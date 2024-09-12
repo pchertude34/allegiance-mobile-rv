@@ -215,7 +215,7 @@
 /* Large Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
   #hero-1061 .cs-background {
-    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic.jpg");
+    background: url("/assets/images/hero-image.webp");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
