@@ -1,7 +1,7 @@
 module.exports = {
   name: 'Allegiance Mobile RV Repair',
   email: 'allegiancervservices@gmail.com',
-  phoneForTel: '971-332-8365',
+  phoneForTel: '971-322-8365',
   phoneFormatted: '(971) 322-8365',
   address: {
     lineOne: '2467 Bunker Ridge Rd S',
