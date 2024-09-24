@@ -14,5 +14,5 @@ module.exports = {
     facebook: 'https://www.facebook.com/profile.php?id=61552812544327',
   },
   //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-  domain: 'https://allegiancervservices.com',
+  domain: 'https://www.allegiancervservices.com',
 };
