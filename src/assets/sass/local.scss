@@ -56,256 +56,145 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #reviews-1832 {
+  #reviews-1670 {
     padding: var(--sectionPadding);
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-
-    &:before {
-      /* gradient that softens the transition from the pattern to the edge of the section */
-      content: "";
-      width: 100%;
-      height: 20%;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      opacity: 1;
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-    }
-
-    &:after {
-      /* gradient that softens the transition from the pattern to the edge of the section */
-      content: "";
-      width: 100%;
-      height: 20%;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 100%
-      );
-      opacity: 1;
-      position: absolute;
-      display: block;
-      bottom: 0;
-      left: 0;
-    }
 
     .cs-container {
       width: 100%;
-      /* changes to 1280px at tablet */
-      max-width: calc(550 / 16 * 1rem);
+      max-width: calc(1280 / 16 * 1rem);
       margin: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* 48px - 64px */
-      gap: clamp(3rem, 6vw, 4rem);
-      position: relative;
-      z-index: 1;
+      /* 40px - 64px */
+      gap: clamp(2.5rem, 4.5vw, 4rem);
     }
 
     .cs-content {
-      /* set text align to left if content needs to be left aligned */
-      text-align: center;
+      text-align: left;
       width: 100%;
       display: flex;
       flex-direction: column;
-      /* centers content horizontally, set to flex-start to left align */
-      align-items: center;
+      align-items: flex-start;
     }
 
     .cs-title {
-      max-width: 26ch;
+      margin: calc(0 / 16 * 1rem);
+    }
+
+    .cs-card-group {
+      width: 100%;
+      padding: 0;
       margin: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      /* 16px - 20px */
+      gap: clamp(1rem, 2.5vw, 1.25rem);
+    }
+
+    .cs-item {
+      list-style: none;
+      width: 100%;
+      /* 20px - 40px top & bottom */
+      /* 20px - 40px left & right */
+      padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
+      background-color: #f7f7f7;
+      /* prevents padding from adding to height and width */
+      box-sizing: border-box;
+      display: flex;
+      grid-column: span 12;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+      /* 24px - 48px */
+      gap: clamp(1.5rem, 4vw, 3rem);
     }
 
     .cs-flex-group {
-      width: 100%;
+      /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
+      margin-top: auto;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: calc(48 / 16 * 1rem);
+      align-items: flex-start;
+      gap: calc(12 / 16 * 1rem);
     }
 
-    .cs-review-group {
-      text-align: center;
-      max-width: calc(860 / 16 * 1rem);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .cs-profile {
+      width: calc(52 / 16 * 1rem);
+      height: auto;
+      border-radius: 50%;
       position: relative;
-      z-index: 1;
-    }
-
-    .cs-stars {
-      width: calc(162 / 16 * 1rem);
-      height: auto;
-      margin: 0 0 calc(24 / 16 * 1rem);
       display: block;
-    }
 
-    .cs-quote {
-      /* 244px - 340px */
-      width: clamp(15.25rem, 25vw, 21.25rem);
-      height: auto;
-      margin: 0 0 calc(24 / 16 * 1rem) 0;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      z-index: -1;
-      transform: translateX(-50%);
-    }
-
-    .cs-review-text {
-      /* 25px - 39px */
-      font-size: clamp(1rem, 3vw, 1.5625rem);
-      line-height: 1.2em;
-      font-weight: bold;
-      text-align: inherit;
-      margin: 0 0 calc(40 / 16 * 1rem) 0;
-      color: var(--headerColor);
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* makes the image behave like a background image */
+        object-fit: cover;
+      }
     }
 
     .cs-name {
+      /* 20px - 25px */
       font-size: calc(20 / 16 * 1rem);
       line-height: 1.2em;
-      text-align: inherit;
       font-weight: 700;
-      margin: 0 0 calc(4 / 16 * 1rem) 0;
+      margin: 0;
+      /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+      margin-top: auto;
       color: var(--headerColor);
       display: block;
     }
 
     .cs-job {
+      /* 14px - 16px */
       font-size: calc(16 / 16 * 1rem);
-      line-height: 1.2em;
-      text-align: inherit;
+      line-height: 1.5em;
+      font-weight: 400;
       margin: 0;
-      color: var(--primary);
+      color: var(--bodyTextColor);
       display: block;
     }
 
-    .cs-image-group {
-      /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
-      font-size: min(3.7vw, 1rem);
-      /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
-      width: calc(372 / 16 * 1em);
-      height: calc(352 / 16 * 1em);
-      /* make a white shadow to fade over the texture background behind it so it hides the fact its a mask on top of the image */
-      box-shadow: rgba(255, 255, 255, 1) 0px -45px 90px 4px;
-      position: relative;
-      z-index: -1;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: calc(16 / 16 * 1rem);
     }
 
-    .cs-picture {
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      img {
-        width: 100%;
-        height: 100%;
-        /* makes it act like a background image */
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-
-    .cs-mask {
-      width: 101%;
-      height: 101%;
-      object-fit: cover;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      z-index: 1;
-      transform: translate(-50%, -50%);
-    }
-
-    .cs-dark {
-      display: none;
-    }
-
-    .cs-waves {
-      width: 55vw;
-      /* 400px - 566px */
-      max-width: clamp(25rem, 40vw, 35.375rem);
+    .cs-item-stars {
+      width: calc(108 / 16 * 1rem);
       height: auto;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      /* 100px - 160px */
-      right: calc(clamp(6.25rem, 17vw, 10rem) * -1);
-      z-index: -1;
-
-      img {
-        width: 100%;
-      }
     }
 
-    .cs-background {
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
+    .cs-review {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.6vw, 1.25rem);
+      line-height: 1.5em;
+      margin: 0;
+      color: var(--bodyTextColor);
+      z-index: 1;
+    }
 
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0.12;
-        /* Makes img tag act as a background image */
-        object-fit: cover;
-      }
+    .cs-quote {
+      width: calc(86 / 16 * 1rem);
+      height: auto;
+      position: absolute;
+      right: calc(0 / 16 * 1rem);
+      bottom: calc(0 / 16 * 1rem);
+      z-index: 0;
     }
   }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-1832 {
-    .cs-container {
-      max-width: calc(1280 / 16 * 1rem);
-    }
-
-    .cs-flex-group {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .cs-image-group {
-      font-size: min(1.68vw, 1rem);
-      /* prevents flexbox from squishing it */
-      flex: none;
-    }
-
-    .cs-review-group {
-      text-align: left;
-      width: 65vw;
-      align-items: flex-start;
-    }
-
-    .cs-quote {
-      left: auto;
-      right: 0;
-      transform: none;
+  #reviews-1670 {
+    .cs-item {
+      grid-column: span 6;
     }
   }
 }
