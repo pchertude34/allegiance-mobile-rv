@@ -23,6 +23,13 @@
       gap: clamp(3rem, 6vw, 4rem);
     }
 
+    .cs-logo-wrapper {
+      // width: 100%;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+    }
+
     .cs-logo {
       width: auto;
       max-width: 90%;
@@ -41,7 +48,7 @@
     }
 
     .cs-logo {
-      width: 20%;
+      width: 100%;
       /* the max width becomes whatever the actual width of the image is */
       max-width: max-content;
       height: auto;
@@ -103,7 +110,6 @@
       box-sizing: border-box;
       display: flex;
       grid-column: span 12;
-      justify-content: center;
       align-items: flex-start;
       flex-direction: column;
       position: relative;
@@ -113,7 +119,7 @@
 
     .cs-flex-group {
       /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
-      margin-top: auto;
+      // margin-top: auto;
       display: flex;
       align-items: flex-start;
       gap: calc(12 / 16 * 1rem);
